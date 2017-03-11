@@ -16,6 +16,10 @@ Vagrant.configure('2') do |config|
     v.cpus = 1
   end
 
+  Vagrant.configure("2") do |config|
+    config.vm.provision "shell", path: "./utils/provision.sh"
+  end
+
   # rails
   config.vm.network 'forwarded_port', guest: 3000, host: 30000
   config.vm.network 'forwarded_port', guest: 3001, host: 30001
