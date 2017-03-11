@@ -14,16 +14,10 @@ Vagrant.configure('2') do |config|
     v.name = name
     v.memory = 2048
     v.cpus = 1
-    v.customize [
-      'modifyvm', :id,
-      '--nictype1', 'virtio',
-      '--name', name,
-      '--natdnshostresolver1', 'on'
-    ]
   end
 
   # rails
-  config.vm.network 'forwarded_port', guest: 3000, host: 3000
-  config.vm.network 'forwarded_port', guest: 3001, host: 3001
-  config.vm.network 'forwarded_port', guest: 3002, host: 3002
+  config.vm.network 'forwarded_port', guest: 3000, host: 30000
+  config.vm.network 'forwarded_port', guest: 3001, host: 30001
+  config.vm.network 'forwarded_port', guest: 3002, host: 30002
 end
