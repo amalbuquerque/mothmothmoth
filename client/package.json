@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "highcharts": "^5.0.9",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-highcharts": "^11.5.0",
+    "semantic-ui-react": "^0.67.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "semantic-ui": "^2.2.9"
   },
   "scripts": {
     "start": "react-scripts start",
